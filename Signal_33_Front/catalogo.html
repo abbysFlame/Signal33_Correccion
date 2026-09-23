@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merch | DJ [NOMBRE]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="client/style.css">
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════ -->
+<header class="site-header scrolled" id="site-header">
+  <a href="index.html" class="brand">DJ&nbsp;<em>[NOMBRE]</em></a>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html#about">Bio</a></li>
+      <li><a href="index.html#sets">Sets</a></li>
+      <li><a href="index.html#eventos">Eventos</a></li>
+      <li><a href="catalogo.html">Merch</a></li>
+      <li><a href="index.html#contacto">Booking</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-right">
+    <button class="cart-btn" id="cart-btn" aria-label="Carrito">
+      🛒 Carrito
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ══ CATALOG HERO ════════════════════════════════════════ -->
+<section class="cat-hero">
+  <div class="wrap cat-hero-inner">
+    <p class="eyebrow">Colección oficial</p>
+    <h1>Merch</h1>
+    <p>Ropa y accesorios de DJ [NOMBRE]. Envíos a toda la república. Preguntas por WhatsApp.</p>
+
+    <div class="filters" id="filters">
+      <button class="chip active" data-cat="all">Todo</button>
+      <button class="chip" data-cat="ropa">Ropa</button>
+      <button class="chip" data-cat="accesorios">Accesorios</button>
+      <button class="chip" data-cat="edicion">Ed. Limitada</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GRID DE MERCH ════════════════════════════════════════ -->
+<main class="wrap">
+  <div class="merch-grid" id="merch-grid">
+
+    <!-- Los datos de cada producto están en el JS al final -->
+    <!-- Las tarjetas se generan dinámicamente -->
+
+  </div>
+</main>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <a href="index.html" class="brand">DJ&nbsp;<em>[NOMBRE]</em></a>
+      <nav class="footer-nav">
+        <a href="index.html#about">Bio</a>
+        <a href="index.html#sets">Sets</a>
+        <a href="index.html#eventos">Eventos</a>
+        <a href="catalogo.html">Merch</a>
+        <a href="index.html#contacto">Booking</a>
+      </nav>
+    </div>
+    <div class="footer-copy">
+      <span>© 2026 DJ [NOMBRE] · Colima, México</span>
+      <span>Todos los derechos reservados</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ CARRITO LATERAL ══════════════════════════════════════ -->
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-panel-head">
+    <h3>CARRITO</h3>
+    <button class="cart-close" id="cart-close" aria-label="Cerrar">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-panel-foot">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cart-total-val">$0</strong>
+    </div>
+    <a href="#" class="btn btn-solid btn-full">Finalizar compra</a>
+  </div>
+</div>
+
+<!-- ══ MODAL DE PRODUCTO ════════════════════════════════════ -->
+<div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true">
+  <div class="modal" id="modal">
+    <div class="modal-img" id="modal-img">🛒</div>
+    <div class="modal-body">
+      <button class="modal-close" id="modal-close" aria-label="Cerrar">✕</button>
+      <p class="modal-cat"  id="modal-cat"></p>
+      <h2 class="modal-name" id="modal-name"></h2>
+      <p class="modal-price" id="modal-price"></p>
+      <p class="modal-desc"  id="modal-desc"></p>
+
+      <p class="modal-label">Talla</p>
+      <div class="sizes" id="modal-sizes"></div>
+
+      <div style="margin-top:auto; padding-top:20px;">
+        <button class="btn btn-solid btn-full" id="modal-add-btn" style="font-size:1rem;padding:1em;">
+          Agregar al carrito
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TOAST ════════════════════════════════════════════════ -->
+<div class="toast" id="toast"></div>
+
+<script src="client/main.js"></script>
+<script src="client/catalogo.js"></script>
+</body>
+</html>
